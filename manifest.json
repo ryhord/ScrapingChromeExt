@@ -1,6 +1,18 @@
   {
-    "name": "Getting Started Example",
+    "name": "Scraping",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "An extension to make web scraping much easier",
+    "permissions": ["storage"],
+    "background": {
+      "scripts": ["scraping.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+      	
+      }
+    },
     "manifest_version": 2
+
   }
