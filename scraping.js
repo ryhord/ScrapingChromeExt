@@ -19,10 +19,19 @@ function run() {
                 document.documentElement.innerHTML = '';
                 document.documentElement.innerHTML = jsonRes;
 
-                //f
-
-                //ar element = document.getElementById("element-id");
-                //element.parentNode.removeChild(element);
+                // select div #content
+                // remove div #content
+                    //var element = document.getElementById("element-id");
+                    //element.parentNode.removeChild(element);
+                // create new div
+                //append to body
+                // create new list
+                // append to the div
+                // for each elemt in json res
+                    // create li
+                    // create text node with val
+                    // apend text node to li
+                    // appen li to list
 
 
 
