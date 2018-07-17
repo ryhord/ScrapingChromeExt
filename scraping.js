@@ -1,14 +1,21 @@
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({color: '#3aa757'}, function() {
-      console.log("The color is green.");
-    });
-	chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-	  chrome.declarativeContent.onPageChanged.addRules([{
-	    conditions: [new chrome.declarativeContent.PageStateMatcher({
-	      pageUrl: {hostEquals: 'developer.chrome.com'},
-	    })
-	    ],
-	        actions: [new chrome.declarativeContent.ShowPageAction()]
-	  }]);
-	});
-});
+document.getElementById("submitBtn").addEventListener("click", run);
+
+
+
+function run() {
+    var url;
+    var selector = document.getElementById('userSelector').value;
+
+    chrome.tabs.query({currentWindow: true, active: true },
+        function (foundTabs) {
+            if (foundTabs.length > 0) {
+                url = foundTabs[0].url; // <--- this is what you are looking for
+                alert(selector + " " + url);
+                /*alert(selector + " " + url);*/
+            } else {
+                alert("there's no window or no selected tab");
+            }
+        })
+    
+
+}

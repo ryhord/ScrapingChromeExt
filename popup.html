@@ -1,13 +1,20 @@
   <!DOCTYPE html>
   <html>
-    <head>
-      <style>
+  <head>
 
+      <style>
+          #userSelector {
+              height: 20px;
+              width: 250px;
+          }
       </style>
-    </head>
-    <body>
-      <form>
-        <input type="input" name="selector">
-      </form>
-    </body>
+  </head>
+  <body>
+        <input id="userUrl" type="hidden" name="url">
+        <input id="userSelector" type="text" name="selector">
+        <br>
+        <button id="submitBtn">Submit</button>
+        <script src="scraping.js"></script>
+  </body>
+    
   </html>
